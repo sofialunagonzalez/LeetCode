@@ -11,7 +11,7 @@ public class MatrixSimilarityAfterCyclicShifts {
                     return true;
                 else {
                     for (int i = 0; i < row; i++) {
-                        if (s == true) {
+                        if (s) {
                             s = allSame(mat, i) || split(mat, i, k);
                         } else {
                             return false;
@@ -33,7 +33,7 @@ public class MatrixSimilarityAfterCyclicShifts {
         }
         public boolean split(int[][] mat, int row, int k) {
             int cols = mat[row].length;
-            boolean split = true;
+            boolean split;
             int j = k % cols;
 
             for (int i = 0; i < cols; i++) {
